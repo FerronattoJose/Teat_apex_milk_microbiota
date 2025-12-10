@@ -1,0 +1,89 @@
+feature-id	Group	Sample_or_control	Quarters	SCC_1	Micro_10
+#q2:types	categorical	categorical	categorical	categorical	categorical
+1AD	Milk	True_Sample	1FR	low	negative
+1AE	Milk	True_Sample	1FL	low	negative
+1PD	Milk	True_Sample	1HR	high	negative
+1PE	Milk	True_Sample	1HL	high	negative
+2AD	Milk	True_Sample	2FR	low	negative
+2AE	Milk	True_Sample	2FL	high	negative
+2PD	Milk	True_Sample	2HR	low	negative
+2PE	Milk	True_Sample	2HL	high	negative
+3AD	Milk	True_Sample	3FR	low	negative
+3AE	Milk	True_Sample	3FL	low	negative
+3PD	Milk	True_Sample	3HR	high	negative
+4AD	Milk	True_Sample	4FR	high	positive
+4AE	Milk	True_Sample	4FL	high	positive
+4PD	Milk	True_Sample	4HR	low	negative
+4PE	Milk	True_Sample	4HL	high	positive
+6AD	Milk	True_Sample	6FR	low	negative
+6AE	Milk	True_Sample	6FL	high	negative
+6PD	Milk	True_Sample	6HR	low	negative
+6PE	Milk	True_Sample	6HL	high	negative
+7AD	Milk	True_Sample	7FR	low	negative
+7AE	Milk	True_Sample	7FL	high	negative
+7PD	Milk	True_Sample	7HR	high	negative
+7PE	Milk	True_Sample	7HL	low	negative
+8AD	Milk	True_Sample	8FR	low	negative
+8AE	Milk	True_Sample	8FL	low	negative
+8PD	Milk	True_Sample	8HR	high	negative
+8PE	Milk	True_Sample	8HL	low	negative
+9AD	Milk	True_Sample	9FR	low	negative
+9AE	Milk	True_Sample	9FL	low	positive
+9PD	Milk	True_Sample	9HR	high	positive
+9PE	Milk	True_Sample	9HL	high	negative
+11AD	Milk	True_Sample	11FR	high	negative
+11AE	Milk	True_Sample	11FL	high	negative
+11PD	Milk	True_Sample	11HR	high	negative
+11PE	Milk	True_Sample	11HL	low	negative
+12AD	Milk	True_Sample	12FR	high	negative
+12AE	Milk	True_Sample	12FL	high	positive
+12PD	Milk	True_Sample	12HR	high	positive
+12PE	Milk	True_Sample	12HL	high	positive
+1ADT	Teat apex	True_Sample	1FRT	low	negative
+1AET	Teat apex	True_Sample	1FLT	low	negative
+1PDT	Teat apex	True_Sample	1HRT	high	negative
+1PET	Teat apex	True_Sample	1HLT	high	negative
+2ADT	Teat apex	True_Sample	2FRT	low	negative
+2AET	Teat apex	True_Sample	2FLT	high	negative
+2PDT	Teat apex	True_Sample	2HRT	low	negative
+2PET	Teat apex	True_Sample	2HLT	high	negative
+3ADT	Teat apex	True_Sample	3FRT	low	negative
+3AET	Teat apex	True_Sample	3FLT	low	negative
+3PDT	Teat apex	True_Sample	3HRT	high	negative
+4ADT	Teat apex	True_Sample	4FRT	high	positive
+4AET	Teat apex	True_Sample	4FLT	high	positive
+4PDT	Teat apex	True_Sample	4HRT	low	negative
+4PET	Teat apex	True_Sample	4HLT	high	positive
+6ADT	Teat apex	True_Sample	6FRT	low	negative
+6AET	Teat apex	True_Sample	6FLT	high	negative
+6PDT	Teat apex	True_Sample	6HRT	low	negative
+6PET	Teat apex	True_Sample	6HLT	high	negative
+7ADT	Teat apex	True_Sample	7FRT	low	negative
+7AET	Teat apex	True_Sample	7FLT	high	negative
+7PDT	Teat apex	True_Sample	7HRT	high	negative
+7PET	Teat apex	True_Sample	7HLT	low	negative
+8ADT	Teat apex	True_Sample	8FRT	low	negative
+8AET	Teat apex	True_Sample	8FLT	low	negative
+8PDT	Teat apex	True_Sample	8HRT	high	negative
+8PET	Teat apex	True_Sample	8HLT	low	negative
+9ADT	Teat apex	True_Sample	9FRT	low	negative
+9AET	Teat apex	True_Sample	9FLT	low	positive
+9PDT	Teat apex	True_Sample	9HRT	high	positive
+9PET	Teat apex	True_Sample	9HLT	high	negative
+11ADT	Teat apex	True_Sample	11FRT	high	negative
+11AET	Teat apex	True_Sample	11FLT	high	negative
+11PDT	Teat apex	True_Sample	11HRT	high	negative
+11PET	Teat apex	True_Sample	11HLT	low	negative
+12ADT	Teat apex	True_Sample	12FRT	high	negative
+12AET	Teat apex	True_Sample	12FLT	high	positive
+12PDT	Teat apex	True_Sample	12HRT	high	positive
+12PET	Teat apex	True_Sample	12HLT	high	positive
+417	Collection control	NEG	417	null	null
+418	Collection control	NEG	418	null	null
+419	Collection control	NEG	419	null	null
+420	Collection control	NEG	420	null	null
+421	Collection control	NEG	421	null	null
+422	Collection control	NEG	422	null	null
+423	Collection control	NEG	423	null	null
+424	Collection control	NEG	424	null	null
+425	Collection control	NEG	425	null	null
