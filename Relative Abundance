@@ -234,4 +234,89 @@ p_avg_gen <- plot_composition(ps2.gen.rel.sorted,
 p_avg_gen
 
 
+##ASV LEVEL (Teat apex) WITH THE NEGATIVE CONTROLS
+
+#BEFORE DECONTAM
+
+#Load your data
+ps2 <- phyloseq_no_beforedecontam
+
+#Subset the sample type
+ps2_teat <- subset_samples(ps2, Group %in% c("Teat apex", "Collection control"))
+
+
+# get relative abudance
+ps2.rel <- microbiome::transform(ps2_teat, "compositional")
+
+#ASV
+ps2.ASV.rel <- aggregate_rare(ps2.rel, level = "ASV_ID", detection = 0.01, prevalence = 0.1)
+
+ps2.ASV.rel <- prune_taxa(taxa_sums(ps2.ASV.rel) > (0.01 * sum(taxa_sums(ps2.ASV.rel))), ps2.ASV.rel)
+
+ps2.ASV.rel <- transform_sample_counts(ps2.ASV.rel, function(x) x / sum(x))
+
+
+table(taxa_sums(ps2.ASV.rel) > (0.01 * sum(taxa_sums(ps2.ASV.rel))))
+
+
+ps2.ASV.rel.sorted <- ps2.ASV.rel %>%
+  tax_sort(
+    by = sum, 
+    at = "ASV_ID",
+    descending = TRUE  # Sort from most to least abundant
+  )
+
+
+
+# DEFINE THE ORDER OF YOUR SAMPLES IN THE GRAPH 
+x_levels <- c(
+  "417", "418", "419", "420", "421",
+  "422", "423", "424", "425",
+  "1FRT", "1FLT", "1HRT", "1HLT",
+  "2FRT", "2FLT", "2HRT", "2HLT",
+  "3FRT", "3FLT", "3HRT",
+  "4FRT", "4FLT", "4HRT", "4HLT",
+  "6FRT", "6FLT", "6HRT", "6HLT",
+  "7FRT", "7FLT", "7HRT", "7HLT",
+  "8FRT", "8FLT", "8HRT", "8HLT",
+  "9FRT", "9FLT", "9HRT", "9HLT",
+  "11FRT", "11FLT", "11HRT", "11HLT",
+  "12FRT", "12FLT", "12HRT", "12HLT"
+)
+
+# SET UP THE BOX AREA FOR THE NEGATIVE CONTROLS
+start_level <- "417"   # FIRST
+end_level   <- "425"   # LAST
+
+start_idx <- which(x_levels == start_level)
+end_idx   <- which(x_levels == end_level)
+
+# DEFINE THE BAR THICKNESS
+xmin_box <- start_idx - 0.5
+xmax_box <- end_idx   + 0.5
+
+# DEFINE THE BOX'S LINE
+ymin_box <- 0
+ymax_box <- 1.02
+
+#PLOT   
+p_avg_ASVb <- plot_composition(ps2.ASV.rel, average_by = "Quarters") +
+  annotate("rect",
+           xmin = xmin_box, xmax = xmax_box,
+           ymin = ymin_box, ymax = ymax_box,
+           fill = NA,                
+           colour = "gold",   
+           size = 1.2) +             
+  guides(fill = guide_legend(ncol = 1)) + 
+  labs(x = NULL, y = "Relative abundance") +
+  scale_fill_manual("ASV-ID", values = rev(colorsASV)) + 
+  scale_x_discrete(limits = x_levels) +
+  coord_cartesian(ylim = c(0,1)) +   
+  theme_bw() + 
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1)) 
+
+p_avg_ASVb
+
+
+
 #AGAIN, TO EVALUATE DIFFERENTS THRESOLDS YOU JUST NEED TO CHANGE THE PHYLOSEQ OBJECT AND APPLY THE SAME CODES.
